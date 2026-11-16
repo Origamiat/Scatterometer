@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PageSettings</class>
+ <widget class="QWidget" name="PageSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>971</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_main">
+   <property name="spacing">
+    <number>16</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="lbl_settings_title">
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>System Settings &amp; Scan Parameters</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layout_columns">
+     <property name="spacing">
+      <number>16</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="group_serial">
+       <property name="title">
+        <string>Teensy 4.1 USB Communication</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_serial">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_port">
+          <property name="text">
+           <string>Serial Port:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="combo_com_port">
+          <item>
+           <property name="text">
+            <string>COM3 (Teensy USB Serial)</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_rate">
+          <property name="text">
+           <string>ADC Sample Rate:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="spin_sample_rate">
+          <property name="suffix">
+           <string> kHz</string>
+          </property>
+          <property name="minimum">
+           <number>10</number>
+          </property>
+          <property name="maximum">
+           <number>500</number>
+          </property>
+          <property name="value">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QPushButton" name="btn_reconnect_teensy">
+          <property name="text">
+           <string>Refresh Connection</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="group_scan_params">
+       <property name="title">
+        <string>Wafer &amp; Motion Parameters</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_scan">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_diam">
+          <property name="text">
+           <string>Wafer Diameter:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="combo_wafer_size">
+          <item>
+           <property name="text">
+            <string>100 mm </string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>150 mm </string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>200 mm</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>300 mm</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_speed">
+          <property name="text">
+           <string>Linear Scan Speed:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="spin_scan_speed">
+          <property name="suffix">
+           <string> mm/s</string>
+          </property>
+          <property name="minimum">
+           <double>1.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>200.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>69.689999999999998</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_pitch">
+          <property name="text">
+           <string>Track Step Pitch:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="spin_track_pitch">
+          <property name="suffix">
+           <string> um</string>
+          </property>
+          <property name="minimum">
+           <double>2.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>11.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_edge">
+          <property name="text">
+           <string>Edge Exclusion:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QDoubleSpinBox" name="spin_edge_exclusion">
+          <property name="suffix">
+           <string> mm</string>
+          </property>
+          <property name="value">
+           <double>3.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="group_detection">
+       <property name="title">
+        <string>Sensor &amp; Detection Thresholds</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_detect">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_t">
+          <property name="text">
+           <string>Trreshold</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="spin_thresh">
+          <property name="suffix">
+           <string> mV</string>
+          </property>
+          <property name="value">
+           <double>3.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_rf">
+          <property name="text">
+           <string>OPT101P Feedback R:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="combo_feedback_r">
+          <item>
+           <property name="text">
+            <string>50 MOhm (+ 20x Stage 2)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>100 MOhm (+ 10x Stage 2)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>20 MOhm (+ 50x Stage 2)</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layout_footer">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_load_json">
+       <property name="text">
+        <string>Load Profile (.json)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_save_json">
+       <property name="text">
+        <string>Save Profile (.json)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_apply_settings">
+       <property name="minimumSize">
+        <size>
+         <width>140</width>
+         <height>38</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Apply Settings</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
