@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PageResults</class>
- <widget class="QWidget" name="PageResults">
+ <class>ResultsPage</class>
+ <widget class="QWidget" name="ResultsPage">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -98,22 +98,11 @@
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_1">
         <item>
-         <widget class="QFrame" name="placeholder_results_wafer_map">
+         <widget class="QFrame" name="wafer_placeholder">
           <property name="frameShape">
            <enum>QFrame::Shape::StyledPanel</enum>
           </property>
-          <layout class="QVBoxLayout" name="layout_results_wafer_map">
-           <item>
-            <widget class="QLabel" name="lbl_res_map_placeholder">
-             <property name="text">
-              <string>Wafer component</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <layout class="QVBoxLayout" name="layout_results_wafer_map"/>
          </widget>
         </item>
        </layout>
@@ -131,7 +120,7 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QFrame" name="placeholder_histogram">
+           <widget class="QFrame" name="histogram_placeholder">
             <property name="frameShape">
              <enum>QFrame::Shape::StyledPanel</enum>
             </property>

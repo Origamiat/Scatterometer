@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PageControl</class>
- <widget class="QWidget" name="PageControl">
+ <class>ControlPage</class>
+ <widget class="QWidget" name="ControlPage">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -127,22 +127,11 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_osc">
           <item>
-           <widget class="QFrame" name="placeholder_oscilloscope">
+           <widget class="QFrame" name="graph_placeholder">
             <property name="frameShape">
              <enum>QFrame::Shape::StyledPanel</enum>
             </property>
-            <layout class="QVBoxLayout" name="layout_oscilloscope">
-             <item>
-              <widget class="QLabel" name="lbl_osc_placeholder">
-               <property name="text">
-                <string>Graph compoennt</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <layout class="QVBoxLayout" name="layout_oscilloscope"/>
            </widget>
           </item>
          </layout>
@@ -155,22 +144,11 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_map">
           <item>
-           <widget class="QFrame" name="placeholder_live_wafer_map">
+           <widget class="QFrame" name="wafer_placeholder">
             <property name="frameShape">
              <enum>QFrame::Shape::StyledPanel</enum>
             </property>
-            <layout class="QVBoxLayout" name="layout_live_wafer_map">
-             <item>
-              <widget class="QLabel" name="lbl_map_placeholder">
-               <property name="text">
-                <string>Wafer component</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <layout class="QVBoxLayout" name="layout_live_wafer_map"/>
            </widget>
           </item>
          </layout>

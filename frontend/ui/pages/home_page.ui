@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PageHome</class>
- <widget class="QWidget" name="PageHome">
+ <class>HomePage</class>
+ <widget class="QWidget" name="HomePage">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -210,12 +210,21 @@
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
          <widget class="QTableWidget" name="table_recent_scans">
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="alternatingRowColors">
            <bool>true</bool>
           </property>
           <property name="selectionBehavior">
            <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
           </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>122</number>
+          </attribute>
           <column>
            <property name="text">
             <string>Wafer ID</string>
@@ -266,22 +275,11 @@
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
-         <widget class="QFrame" name="placeholder_home_wafer">
+         <widget class="QFrame" name="wafer_placeholder">
           <property name="frameShape">
            <enum>QFrame::Shape::StyledPanel</enum>
           </property>
-          <layout class="QVBoxLayout" name="layout_home_wafer_preview">
-           <item>
-            <widget class="QLabel" name="lbl_home_plot_placeholder">
-             <property name="text">
-              <string>Wafer component</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <layout class="QVBoxLayout" name="layout_home_wafer_preview"/>
          </widget>
         </item>
        </layout>
