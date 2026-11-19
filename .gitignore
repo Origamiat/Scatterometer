@@ -82,3 +82,4 @@ firmware/.vscode/ipch/
 frontend/.venv/
 frontend/build/
 frontend/src/scatterometer_frontend.egg-info
+__pycache__/
