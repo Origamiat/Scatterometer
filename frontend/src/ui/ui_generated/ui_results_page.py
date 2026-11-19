@@ -72,19 +72,13 @@ class Ui_ResultsPage(object):
         self.group_results_map.setObjectName(u"group_results_map")
         self.verticalLayout_1 = QVBoxLayout(self.group_results_map)
         self.verticalLayout_1.setObjectName(u"verticalLayout_1")
-        self.placeholder_results_wafer_map = QFrame(self.group_results_map)
-        self.placeholder_results_wafer_map.setObjectName(u"placeholder_results_wafer_map")
-        self.placeholder_results_wafer_map.setFrameShape(QFrame.Shape.StyledPanel)
-        self.layout_results_wafer_map = QVBoxLayout(self.placeholder_results_wafer_map)
+        self.wafer_placeholder = QFrame(self.group_results_map)
+        self.wafer_placeholder.setObjectName(u"wafer_placeholder")
+        self.wafer_placeholder.setFrameShape(QFrame.Shape.StyledPanel)
+        self.layout_results_wafer_map = QVBoxLayout(self.wafer_placeholder)
         self.layout_results_wafer_map.setObjectName(u"layout_results_wafer_map")
-        self.lbl_res_map_placeholder = QLabel(self.placeholder_results_wafer_map)
-        self.lbl_res_map_placeholder.setObjectName(u"lbl_res_map_placeholder")
-        self.lbl_res_map_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.layout_results_wafer_map.addWidget(self.lbl_res_map_placeholder)
-
-
-        self.verticalLayout_1.addWidget(self.placeholder_results_wafer_map)
+        self.verticalLayout_1.addWidget(self.wafer_placeholder)
 
 
         self.layout_results_body.addWidget(self.group_results_map)
@@ -96,19 +90,19 @@ class Ui_ResultsPage(object):
         self.group_histogram.setObjectName(u"group_histogram")
         self.verticalLayout_2 = QVBoxLayout(self.group_histogram)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.placeholder_histogram = QFrame(self.group_histogram)
-        self.placeholder_histogram.setObjectName(u"placeholder_histogram")
-        self.placeholder_histogram.setFrameShape(QFrame.Shape.StyledPanel)
-        self.layout_histogram = QVBoxLayout(self.placeholder_histogram)
+        self.histogram_placeholder = QFrame(self.group_histogram)
+        self.histogram_placeholder.setObjectName(u"histogram_placeholder")
+        self.histogram_placeholder.setFrameShape(QFrame.Shape.StyledPanel)
+        self.layout_histogram = QVBoxLayout(self.histogram_placeholder)
         self.layout_histogram.setObjectName(u"layout_histogram")
-        self.lbl_hist_placeholder = QLabel(self.placeholder_histogram)
+        self.lbl_hist_placeholder = QLabel(self.histogram_placeholder)
         self.lbl_hist_placeholder.setObjectName(u"lbl_hist_placeholder")
         self.lbl_hist_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.layout_histogram.addWidget(self.lbl_hist_placeholder)
 
 
-        self.verticalLayout_2.addWidget(self.placeholder_histogram)
+        self.verticalLayout_2.addWidget(self.histogram_placeholder)
 
 
         self.layout_right_panes.addWidget(self.group_histogram)
@@ -163,7 +157,6 @@ class Ui_ResultsPage(object):
         self.btn_export_csv.setText(QCoreApplication.translate("ResultsPage", u"Export CSV", None))
         self.btn_export_map_png.setText(QCoreApplication.translate("ResultsPage", u"Save ", None))
         self.group_results_map.setTitle(QCoreApplication.translate("ResultsPage", u" Wafer Particle Map (Click to Inspect)", None))
-        self.lbl_res_map_placeholder.setText(QCoreApplication.translate("ResultsPage", u"Wafer component", None))
         self.group_histogram.setTitle(QCoreApplication.translate("ResultsPage", u"Particle Estimated Size Distribution (nm)", None))
         self.lbl_hist_placeholder.setText(QCoreApplication.translate("ResultsPage", u"Histogram", None))
         self.group_defect_table.setTitle(QCoreApplication.translate("ResultsPage", u"Detected Particle Coordinates", None))

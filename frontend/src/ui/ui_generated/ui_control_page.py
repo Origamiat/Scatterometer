@@ -82,19 +82,13 @@ class Ui_ControlPage(object):
         self.group_oscilloscope.setObjectName(u"group_oscilloscope")
         self.verticalLayout_osc = QVBoxLayout(self.group_oscilloscope)
         self.verticalLayout_osc.setObjectName(u"verticalLayout_osc")
-        self.placeholder_oscilloscope = QFrame(self.group_oscilloscope)
-        self.placeholder_oscilloscope.setObjectName(u"placeholder_oscilloscope")
-        self.placeholder_oscilloscope.setFrameShape(QFrame.Shape.StyledPanel)
-        self.layout_oscilloscope = QVBoxLayout(self.placeholder_oscilloscope)
+        self.graph_placeholder = QFrame(self.group_oscilloscope)
+        self.graph_placeholder.setObjectName(u"graph_placeholder")
+        self.graph_placeholder.setFrameShape(QFrame.Shape.StyledPanel)
+        self.layout_oscilloscope = QVBoxLayout(self.graph_placeholder)
         self.layout_oscilloscope.setObjectName(u"layout_oscilloscope")
-        self.lbl_osc_placeholder = QLabel(self.placeholder_oscilloscope)
-        self.lbl_osc_placeholder.setObjectName(u"lbl_osc_placeholder")
-        self.lbl_osc_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.layout_oscilloscope.addWidget(self.lbl_osc_placeholder)
-
-
-        self.verticalLayout_osc.addWidget(self.placeholder_oscilloscope)
+        self.verticalLayout_osc.addWidget(self.graph_placeholder)
 
 
         self.layout_graphs.addWidget(self.group_oscilloscope)
@@ -103,19 +97,13 @@ class Ui_ControlPage(object):
         self.group_wafer_map.setObjectName(u"group_wafer_map")
         self.verticalLayout_map = QVBoxLayout(self.group_wafer_map)
         self.verticalLayout_map.setObjectName(u"verticalLayout_map")
-        self.placeholder_live_wafer_map = QFrame(self.group_wafer_map)
-        self.placeholder_live_wafer_map.setObjectName(u"placeholder_live_wafer_map")
-        self.placeholder_live_wafer_map.setFrameShape(QFrame.Shape.StyledPanel)
-        self.layout_live_wafer_map = QVBoxLayout(self.placeholder_live_wafer_map)
+        self.wafer_placeholder = QFrame(self.group_wafer_map)
+        self.wafer_placeholder.setObjectName(u"wafer_placeholder")
+        self.wafer_placeholder.setFrameShape(QFrame.Shape.StyledPanel)
+        self.layout_live_wafer_map = QVBoxLayout(self.wafer_placeholder)
         self.layout_live_wafer_map.setObjectName(u"layout_live_wafer_map")
-        self.lbl_map_placeholder = QLabel(self.placeholder_live_wafer_map)
-        self.lbl_map_placeholder.setObjectName(u"lbl_map_placeholder")
-        self.lbl_map_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.layout_live_wafer_map.addWidget(self.lbl_map_placeholder)
-
-
-        self.verticalLayout_map.addWidget(self.placeholder_live_wafer_map)
+        self.verticalLayout_map.addWidget(self.wafer_placeholder)
 
 
         self.layout_graphs.addWidget(self.group_wafer_map)
@@ -250,9 +238,7 @@ class Ui_ControlPage(object):
         self.btn_return_home.setText(QCoreApplication.translate("ControlPage", u"Home Stage", None))
         self.lbl_scan_eta.setText(QCoreApplication.translate("ControlPage", u"ETA: --:--:--", None))
         self.group_oscilloscope.setTitle(QCoreApplication.translate("ControlPage", u"Live Sensor Graph", None))
-        self.lbl_osc_placeholder.setText(QCoreApplication.translate("ControlPage", u"Graph compoennt", None))
         self.group_wafer_map.setTitle(QCoreApplication.translate("ControlPage", u"Real-Time 2D Wafer Particle Map", None))
-        self.lbl_map_placeholder.setText(QCoreApplication.translate("ControlPage", u"Wafer component", None))
         self.group_stage_telemetry.setTitle(QCoreApplication.translate("ControlPage", u"Live Stage Position", None))
         self.label_x.setText(QCoreApplication.translate("ControlPage", u"X Position:", None))
         self.lbl_live_x.setText(QCoreApplication.translate("ControlPage", u"0.000 mm", None))

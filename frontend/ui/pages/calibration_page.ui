@@ -189,22 +189,11 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_scope" stretch="1,0">
       <item>
-       <widget class="QFrame" name="placeholder_cal_scope">
+       <widget class="QFrame" name="graph_placeholder">
         <property name="frameShape">
          <enum>QFrame::Shape::StyledPanel</enum>
         </property>
-        <layout class="QVBoxLayout" name="layout_cal_scope">
-         <item>
-          <widget class="QLabel" name="lbl_cal_scope_placeholder">
-           <property name="text">
-            <string>Graph implementation</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignmentFlag::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <layout class="QVBoxLayout" name="layout_cal_scope"/>
        </widget>
       </item>
       <item>

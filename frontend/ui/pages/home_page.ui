@@ -275,22 +275,11 @@
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
-         <widget class="QFrame" name="placeholder_home_wafer">
+         <widget class="QFrame" name="wafer_placeholder">
           <property name="frameShape">
            <enum>QFrame::Shape::StyledPanel</enum>
           </property>
-          <layout class="QVBoxLayout" name="layout_home_wafer_preview">
-           <item>
-            <widget class="QLabel" name="lbl_home_plot_placeholder">
-             <property name="text">
-              <string>Wafer component</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <layout class="QVBoxLayout" name="layout_home_wafer_preview"/>
          </widget>
         </item>
        </layout>

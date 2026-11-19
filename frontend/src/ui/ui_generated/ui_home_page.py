@@ -183,19 +183,13 @@ class Ui_HomePage(object):
         self.group_last_preview.setObjectName(u"group_last_preview")
         self.verticalLayout_6 = QVBoxLayout(self.group_last_preview)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.placeholder_home_wafer = QFrame(self.group_last_preview)
-        self.placeholder_home_wafer.setObjectName(u"placeholder_home_wafer")
-        self.placeholder_home_wafer.setFrameShape(QFrame.Shape.StyledPanel)
-        self.layout_home_wafer_preview = QVBoxLayout(self.placeholder_home_wafer)
+        self.wafer_placeholder = QFrame(self.group_last_preview)
+        self.wafer_placeholder.setObjectName(u"wafer_placeholder")
+        self.wafer_placeholder.setFrameShape(QFrame.Shape.StyledPanel)
+        self.layout_home_wafer_preview = QVBoxLayout(self.wafer_placeholder)
         self.layout_home_wafer_preview.setObjectName(u"layout_home_wafer_preview")
-        self.lbl_home_plot_placeholder = QLabel(self.placeholder_home_wafer)
-        self.lbl_home_plot_placeholder.setObjectName(u"lbl_home_plot_placeholder")
-        self.lbl_home_plot_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.layout_home_wafer_preview.addWidget(self.lbl_home_plot_placeholder)
-
-
-        self.verticalLayout_6.addWidget(self.placeholder_home_wafer)
+        self.verticalLayout_6.addWidget(self.wafer_placeholder)
 
 
         self.layout_bottom_area.addWidget(self.group_last_preview)
@@ -238,7 +232,6 @@ class Ui_HomePage(object):
         self.btn_open_selected_scan.setText(QCoreApplication.translate("HomePage", u"Open", None))
         self.btn_run_cal_check.setText(QCoreApplication.translate("HomePage", u"Run  Calibration Check", None))
         self.group_last_preview.setTitle(QCoreApplication.translate("HomePage", u"Last Wafer Defect Map", None))
-        self.lbl_home_plot_placeholder.setText(QCoreApplication.translate("HomePage", u"Wafer component", None))
         pass
     # retranslateUi
 

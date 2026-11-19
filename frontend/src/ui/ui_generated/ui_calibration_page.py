@@ -120,19 +120,13 @@ class Ui_CalibrationPage(object):
         self.group_cal_scope.setObjectName(u"group_cal_scope")
         self.verticalLayout_scope = QVBoxLayout(self.group_cal_scope)
         self.verticalLayout_scope.setObjectName(u"verticalLayout_scope")
-        self.placeholder_cal_scope = QFrame(self.group_cal_scope)
-        self.placeholder_cal_scope.setObjectName(u"placeholder_cal_scope")
-        self.placeholder_cal_scope.setFrameShape(QFrame.Shape.StyledPanel)
-        self.layout_cal_scope = QVBoxLayout(self.placeholder_cal_scope)
+        self.graph_placeholder = QFrame(self.group_cal_scope)
+        self.graph_placeholder.setObjectName(u"graph_placeholder")
+        self.graph_placeholder.setFrameShape(QFrame.Shape.StyledPanel)
+        self.layout_cal_scope = QVBoxLayout(self.graph_placeholder)
         self.layout_cal_scope.setObjectName(u"layout_cal_scope")
-        self.lbl_cal_scope_placeholder = QLabel(self.placeholder_cal_scope)
-        self.lbl_cal_scope_placeholder.setObjectName(u"lbl_cal_scope_placeholder")
-        self.lbl_cal_scope_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.layout_cal_scope.addWidget(self.lbl_cal_scope_placeholder)
-
-
-        self.verticalLayout_scope.addWidget(self.placeholder_cal_scope)
+        self.verticalLayout_scope.addWidget(self.graph_placeholder)
 
         self.horizontalLayout_metrics = QHBoxLayout()
         self.horizontalLayout_metrics.setObjectName(u"horizontalLayout_metrics")
@@ -185,7 +179,6 @@ class Ui_CalibrationPage(object):
         self.group_laser_override.setTitle(QCoreApplication.translate("CalibrationPage", u"Diagnostics", None))
         self.btn_measure_noise_floor.setText(QCoreApplication.translate("CalibrationPage", u"Sample Dark Noise Floor", None))
         self.group_cal_scope.setTitle(QCoreApplication.translate("CalibrationPage", u"Graph", None))
-        self.lbl_cal_scope_placeholder.setText(QCoreApplication.translate("CalibrationPage", u"Graph implementation", None))
         self.lbl_cal_rms_noise.setText(QCoreApplication.translate("CalibrationPage", u"Noise: 0.19 mV", None))
         self.lbl_cal_peak_v.setText(QCoreApplication.translate("CalibrationPage", u"Peak Amplitude: 0.00 mV", None))
         self.lbl_cal_snr.setText(QCoreApplication.translate("CalibrationPage", u"Live SNR: --", None))

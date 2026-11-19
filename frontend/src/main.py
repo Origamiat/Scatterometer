@@ -2,8 +2,7 @@ import sys
 import pyqtgraph as pg
 from PySide6.QtWidgets import QApplication
 from qt_material import apply_stylesheet
-from ui.main_window import MainWindow
-
+from frontend.src.ui.main_window import MainWindow
 
 def main() -> None:
     app = QApplication(sys.argv)
